@@ -44,8 +44,8 @@ export class NgxTimepickerTimeControlComponent implements OnChanges {
         if (!isDigit(event)) {
             event.preventDefault();
         }
-        const char = String.fromCharCode(event.keyCode);
-        const time = concatTime(String(this.time), char);
+
+        const time = concatTime(String(this.time), event.key);
 
         this.changeTimeIfValid(time);
 

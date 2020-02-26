@@ -65,7 +65,7 @@ export class NgxTimepickerFieldComponent implements OnInit, OnDestroy, ControlVa
 
     @Input()
     set defaultTime(val: string) {
-        const time = TimeAdapter.formatTime(val, {locale: this.locale, format: this._format});
+        const time = TimeAdapter.formatTime(val, { locale: this.locale, format: this._format });
         this.timepickerService.setDefaultTimeIfAvailable(time, null, null, this._format);
         this._defaultTime = time;
         this.timepickerTime = time;
@@ -91,7 +91,7 @@ export class NgxTimepickerFieldComponent implements OnInit, OnDestroy, ControlVa
     }
 
     constructor(private timepickerService: NgxMaterialTimepickerService,
-                @Inject(TIME_LOCALE) private locale: string) {
+        @Inject(TIME_LOCALE) private locale: string) {
     }
 
     ngOnInit() {
@@ -155,12 +155,12 @@ export class NgxTimepickerFieldComponent implements OnInit, OnDestroy, ControlVa
     }
 
     private resetTime(): void {
-        this.timepickerService.hour = {angle: 0, time: null};
-        this.timepickerService.minute = {angle: 0, time: null};
+        this.timepickerService.hour = { angle: 0, time: null };
+        this.timepickerService.minute = { angle: 0, time: null };
     }
 
     private emitLocalTimeChange(time: string): void {
-        const localTime = TimeAdapter.toLocaleTimeString(time, {format: this.format, locale: this.locale});
+        const localTime = TimeAdapter.toLocaleTimeString(time, { format: this.format, locale: this.locale });
 
         this.onChange(localTime);
         this.timeChanged.emit(localTime);
