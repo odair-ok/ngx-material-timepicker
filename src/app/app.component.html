@@ -4,10 +4,11 @@
         <a class="github-link" href="https://github.com/Agranom/ngx-material-timepicker.git">
             <!--suppress HtmlUnknownAttribute -->
             <svg aria-labelledby="simpleicons-github-icon" role="img" viewBox="0 0 24 24"
-                 xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-github-icon">GitHub icon</title>
+                xmlns="http://www.w3.org/2000/svg">
+                <title id="simpleicons-github-icon">GitHub icon</title>
                 <!--suppress CheckEmptyScriptTag -->
                 <path fill="#ffffff"
-                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
             </svg>
 
         </a>
@@ -30,28 +31,27 @@
                     </p>
                     <div class="ngx-material-timepicker-example__form-group">
                         <input placeholder="12hr format (default settings)" aria-label="12hr format"
-                               [ngxTimepicker]="defaultPicker" readonly>
+                            [ngxTimepicker]="defaultPicker" readonly>
                         <ngx-material-timepicker #defaultPicker [preventOverlayClick]="true"></ngx-material-timepicker>
                     </div>
                     <div class="ngx-material-timepicker-example__form-group">
-                        <input placeholder="24hr format" aria-label="24hr format"
-                               [ngxTimepicker]="fullTime" [format]="24" readonly>
+                        <input placeholder="24hr format" aria-label="24hr format" [ngxTimepicker]="fullTime"
+                            [format]="24" readonly>
                         <ngx-material-timepicker #fullTime></ngx-material-timepicker>
                     </div>
                     <div class="ngx-material-timepicker-example__form-group">
-                        <input aria-label="default value"
-                               [ngxTimepicker]="defaultValue" [value]="'05:11 pm'" readonly>
+                        <input aria-label="default value" [ngxTimepicker]="defaultValue" [value]="'05:11 pm'" readonly>
                         <ngx-material-timepicker #defaultValue></ngx-material-timepicker>
                     </div>
                     <div class="ngx-material-timepicker-example__form-group">
                         <input placeholder="Default time 11:11 pm" aria-label="default time"
-                               [ngxTimepicker]="defaultTime" readonly>
+                            [ngxTimepicker]="defaultTime" readonly>
                         <ngx-material-timepicker #defaultTime [defaultTime]="'11:11 pm'"></ngx-material-timepicker>
                     </div>
                     <div
                         class="ngx-material-timepicker-example__form-group ngx-material-timepicker-example__form-group--disabled">
                         <input placeholder="Disabled Time Picker" aria-label="disabled time picker"
-                               [ngxTimepicker]="disabled" [disabled]="true">
+                            [ngxTimepicker]="disabled" [disabled]="true">
                         <ngx-material-timepicker #disabled></ngx-material-timepicker>
                     </div>
                 </div>
@@ -63,20 +63,18 @@
                         Set up min or max value (or both) for the timepicker.
                     </p>
                     <div class="ngx-material-timepicker-example__form-group">
-                        <input placeholder="Min time 03:15 am"
-                               [ngxTimepicker]="min" [min]="'03:15 am'" readonly>
+                        <input placeholder="Min time 03:15 am" [ngxTimepicker]="min" [min]="'03:15 am'" readonly>
 
                         <ngx-material-timepicker #min></ngx-material-timepicker>
                     </div>
                     <div class="ngx-material-timepicker-example__form-group">
-                        <input placeholder="Max time 06:18 pm"
-                               [ngxTimepicker]="max" max="06:18 pm" readonly>
+                        <input placeholder="Max time 06:18 pm" [ngxTimepicker]="max" max="06:18 pm" readonly>
 
                         <ngx-material-timepicker #max></ngx-material-timepicker>
                     </div>
                     <div class="ngx-material-timepicker-example__form-group">
-                        <input placeholder="Time range from 12:10 am to 08:11 pm"
-                               [ngxTimepicker]="range" min="12:10 am" max="08:11 pm" readonly>
+                        <input placeholder="Time range from 12:10 am to 08:11 pm" [ngxTimepicker]="range" min="12:10 am"
+                            max="08:11 pm" readonly>
 
                         <ngx-material-timepicker #range></ngx-material-timepicker>
                     </div>
@@ -101,25 +99,24 @@
                     </p>
                     <div
                         class="ngx-material-timepicker-example__form-group ngx-material-timepicker-example__form-group--toggled">
-                        <input placeholder="Toggle button"
-                               [ngxTimepicker]="toggleIcon" [disableClick]="true" readonly>
+                        <input placeholder="Toggle button" [ngxTimepicker]="toggleIcon" [disableClick]="true" readonly>
                         <ngx-material-timepicker-toggle [for]="toggleIcon">
                             <!--suppress HtmlUnknownAttribute -->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px"
-                                 ngxMaterialTimepickerToggleIcon>
+                                ngxMaterialTimepickerToggleIcon>
                                 <!--suppress CheckEmptyScriptTag -->
                                 <path
-                                    d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16,16H7.995 C7.445,16,7,15.555,7,15.005v-0.011C7,14.445,7.445,14,7.995,14H14V5.995C14,5.445,14.445,5,14.995,5h0.011 C15.555,5,16,5.445,16,5.995V16z"/>
+                                    d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16,16H7.995 C7.445,16,7,15.555,7,15.005v-0.011C7,14.445,7.445,14,7.995,14H14V5.995C14,5.445,14.445,5,14.995,5h0.011 C15.555,5,16,5.445,16,5.995V16z" />
                             </svg>
                         </ngx-material-timepicker-toggle>
                         <ngx-material-timepicker #toggleIcon></ngx-material-timepicker>
                     </div>
                     <div
                         class="ngx-material-timepicker-example__form-group ngx-material-timepicker-example__form-group--toggled">
-                        <input placeholder="Toggle button (disabled)"
-                               [ngxTimepicker]="toggleTimepickerDisabled" [disableClick]="true" readonly>
-                        <ngx-material-timepicker-toggle [for]="toggleTimepickerDisabled"
-                                                        [disabled]="true"></ngx-material-timepicker-toggle>
+                        <input placeholder="Toggle button (disabled)" [ngxTimepicker]="toggleTimepickerDisabled"
+                            [disableClick]="true" readonly>
+                        <ngx-material-timepicker-toggle [for]="toggleTimepickerDisabled" [disabled]="true">
+                        </ngx-material-timepicker-toggle>
                         <ngx-material-timepicker #toggleTimepickerDisabled></ngx-material-timepicker>
                     </div>
                 </div>
@@ -134,9 +131,9 @@
                     </p>
                     <div class="ngx-material-timepicker-example__form-group">
                         <input placeholder="Editable dial" aria-label="Editable dial"
-                               [ngxTimepicker]="editableDialPicker" readonly>
-                        <ngx-material-timepicker #editableDialPicker
-                                                 [enableKeyboardInput]="true"></ngx-material-timepicker>
+                            [ngxTimepicker]="editableDialPicker" readonly>
+                        <ngx-material-timepicker #editableDialPicker [enableKeyboardInput]="true">
+                        </ngx-material-timepicker>
                     </div>
                 </div>
             </section>
@@ -148,13 +145,11 @@
                         You can set up a gap for minutes. It is '1' by default.
                     </p>
                     <div class="ngx-material-timepicker-example__form-group">
-                        <input placeholder="Default gap"
-                               [ngxTimepicker]="defaultGap" readonly>
+                        <input placeholder="Default gap" [ngxTimepicker]="defaultGap" readonly>
                         <ngx-material-timepicker #defaultGap></ngx-material-timepicker>
                     </div>
                     <div class="ngx-material-timepicker-example__form-group">
-                        <input placeholder="Gap with 5"
-                               [ngxTimepicker]="with5Gap" readonly>
+                        <input placeholder="Gap with 5" [ngxTimepicker]="with5Gap" readonly>
                         <ngx-material-timepicker #with5Gap [minutesGap]="5"></ngx-material-timepicker>
                     </div>
                 </div>
@@ -168,9 +163,9 @@
                     </p>
                     <div class="ngx-material-timepicker-example__form-group">
                         <input placeholder="Custom buttons" aria-label="Custom buttons"
-                               [ngxTimepicker]="timepickerWithButtons" readonly>
+                            [ngxTimepicker]="timepickerWithButtons" readonly>
                         <ngx-material-timepicker #timepickerWithButtons [cancelBtnTmpl]="cancelBtn"
-                                                 [confirmBtnTmpl]="confirmBtn"></ngx-material-timepicker>
+                            [confirmBtnTmpl]="confirmBtn"></ngx-material-timepicker>
                         <ng-template #cancelBtn>
                             <button style="margin-right: 10px;">Cancel tmpl</button>
                         </ng-template>
@@ -179,16 +174,14 @@
                         </ng-template>
                     </div>
                     <div class="ngx-material-timepicker-example__form-group">
-                        <input placeholder="Custom theme" aria-label="Custom theme"
-                               [ngxTimepicker]="darkPicker" readonly>
-                        <ngx-material-timepicker #darkPicker
-                                                 [theme]="darkTheme"></ngx-material-timepicker>
+                        <input placeholder="Custom theme" aria-label="Custom theme" [ngxTimepicker]="darkPicker"
+                            readonly>
+                        <ngx-material-timepicker #darkPicker [theme]="darkTheme"></ngx-material-timepicker>
                     </div>
                     <div class="ngx-material-timepicker-example__form-group">
-                        <input placeholder="Custom hint" aria-label="Custom hint"
-                               [ngxTimepicker]="customHint" readonly>
-                        <ngx-material-timepicker #customHint [enableKeyboardInput]="true"
-                                                 [editableHintTmpl]="dialHint"></ngx-material-timepicker>
+                        <input placeholder="Custom hint" aria-label="Custom hint" [ngxTimepicker]="customHint" readonly>
+                        <ngx-material-timepicker #customHint [enableKeyboardInput]="true" [editableHintTmpl]="dialHint">
+                        </ngx-material-timepicker>
                         <ng-template #dialHint>
                             <p>Custom hint</p>
                         </ng-template>
@@ -203,9 +196,8 @@
                     </p>
                     <div class="ngx-material-timepicker-example__form-group">
                         <input placeholder="Append to input" aria-label="Append to input"
-                               [ngxTimepicker]="appendedToInput" readonly>
-                        <ngx-material-timepicker #appendedToInput
-                                                 [appendToInput]="true"></ngx-material-timepicker>
+                            [ngxTimepicker]="appendedToInput" readonly>
+                        <ngx-material-timepicker #appendedToInput [appendToInput]="true"></ngx-material-timepicker>
                     </div>
                 </div>
             </section>
@@ -219,7 +211,7 @@
                 <app-example-source-code [sourceCode]="controlSimpleSettings">Simple examples</app-example-source-code>
                 <div class="ngx-material-timepicker-example__body">
                     <p class="ngx-material-timepicker-example__description">
-                            Simple settings
+                        Simple settings
                     </p>
                     <div class="ngx-material-timepicker-example__form-group">
                         <ngx-timepicker-field [defaultTime]="'11:11 am'"></ngx-timepicker-field>
@@ -228,7 +220,8 @@
                         <ngx-timepicker-field [format]="24" [defaultTime]="'07:00'"></ngx-timepicker-field>
                     </div>
                     <div class="ngx-material-timepicker-example__form-group">
-                        <ngx-timepicker-field [format]="24" [defaultTime]="'23:11'"></ngx-timepicker-field>
+                        <ngx-timepicker-field [minIncrement]="5" [format]="24" [defaultTime]="'23:11'">
+                        </ngx-timepicker-field>
                     </div>
                     <div class="ngx-material-timepicker-example__form-group">
                         <ngx-timepicker-field [disabled]="true"></ngx-timepicker-field>
@@ -248,12 +241,13 @@
                         <ngx-timepicker-field [toggleIcon]="icon"></ngx-timepicker-field>
                         <ng-template #icon>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">
-                                <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16,16H7.995 C7.445,16,7,15.555,7,15.005v-0.011C7,14.445,7.445,14,7.995,14H14V5.995C14,5.445,14.445,5,14.995,5h0.011 C15.555,5,16,5.445,16,5.995V16z"/>
+                                <path
+                                    d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16,16H7.995 C7.445,16,7,15.555,7,15.005v-0.011C7,14.445,7.445,14,7.995,14H14V5.995C14,5.445,14.445,5,14.995,5h0.011 C15.555,5,16,5.445,16,5.995V16z" />
                             </svg>
                         </ng-template>
                     </div>
                     <div class="ngx-material-timepicker-example__form-group">
-                        <ngx-timepicker-field [controlOnly]="true"></ngx-timepicker-field>
+                        <ngx-timepicker-field [minIncrement]="5" [controlOnly]="true"></ngx-timepicker-field>
                     </div>
                 </div>
             </section>

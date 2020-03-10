@@ -16,6 +16,7 @@ export class NgxTimepickerTimeControlComponent implements OnChanges {
     @Input() time: number;
     @Input() min: number;
     @Input() max: number;
+    @Input() increment: number;
     @Input() placeholder: string;
     @Input() timeUnit: TimeUnit;
     @Input() disabled: boolean;
@@ -28,6 +29,7 @@ export class NgxTimepickerTimeControlComponent implements OnChanges {
     private previousTime: number;
 
     constructor(private timeParser: TimeParserPipe) {
+        this.increment = this.increment ? this.increment : 1;
     }
 
 
@@ -61,7 +63,7 @@ export class NgxTimepickerTimeControlComponent implements OnChanges {
 
     increase(): void {
         if (!this.disabled) {
-            let nextTime = +this.time + 1;
+            let nextTime = +this.time + this.increment;
 
             if (nextTime > this.max) {
                 nextTime = this.min;
@@ -73,7 +75,7 @@ export class NgxTimepickerTimeControlComponent implements OnChanges {
 
     decrease(): void {
         if (!this.disabled) {
-            let previousTime = +this.time - 1;
+            let previousTime = +this.time - this.increment;
 
             if (previousTime < this.min) {
                 previousTime = this.max;
@@ -106,7 +108,7 @@ export class NgxTimepickerTimeControlComponent implements OnChanges {
 
             if (this.time > this.max) {
                 const timeString = String(value);
-                this.time = +timeString[timeString.length - 1];
+                this.time = +timeString[timeString.length - this.increment];
             }
 
             if (this.time < this.min) {

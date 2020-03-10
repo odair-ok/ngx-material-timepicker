@@ -29,6 +29,7 @@ export class NgxTimepickerFieldComponent implements OnInit, OnDestroy, ControlVa
     hour$: Observable<ClockFaceTime>;
     minute$: Observable<ClockFaceTime>;
 
+    minuteIncrement = 1;
     minHour = 1;
     maxHour = 12;
 
@@ -37,6 +38,7 @@ export class NgxTimepickerFieldComponent implements OnInit, OnDestroy, ControlVa
     isDefaultTime: boolean;
 
     @Input() disabled: boolean;
+    @Input() minIncrement: number;
     @Input() toggleIcon: TemplateRef<HTMLObjectElement>;
     @Input() buttonAlign: 'right' | 'left' = 'right';
     @Input() clockTheme: NgxMaterialTimepickerTheme;
@@ -46,6 +48,7 @@ export class NgxTimepickerFieldComponent implements OnInit, OnDestroy, ControlVa
 
     @Input()
     set format(value: number) {
+        this._format = value === 24 ? 24 : 12;
         this._format = value === 24 ? 24 : 12;
         this.minHour = this._format === 12 ? 1 : 0;
         this.maxHour = this._format === 12 ? 12 : 23;
@@ -98,6 +101,8 @@ export class NgxTimepickerFieldComponent implements OnInit, OnDestroy, ControlVa
         this.period$ = this.timepickerService.selectedPeriod;
         this.hour$ = this.timepickerService.selectedHour;
         this.minute$ = this.timepickerService.selectedMinute;
+
+        this.minuteIncrement = this.minIncrement ? this.minIncrement : 1;
 
         this.hoursList = getHours(this._format);
         this.minutesList = getMinutes();
